@@ -4,7 +4,7 @@ import Country from './Countries/Country'
 const Header = ({countriespromise}) => {
   const [visitedcountries,setvisitedcountries]=useState([]);
   const [visitedFlags,setvisitedFlags]=useState([])
-  const [reset,setreset] =useState('');
+  
 
 const handleVisitedCountry =(country)=>{
   // console.log("visited country", country);
@@ -36,7 +36,7 @@ const countries =countriesData.countries
   <button className="btn btn-ghost text-xl">Hello World</button>
 </div>
 
-<h2 className='mt-10 text-center text-3xl text-cyan-500 font-bold'>In the Country : {countries.length}</h2>
+<h2 className='mt-10 text-center text-3xl text-cyan-500 font-bold'>Visited the Country : {countries.length}</h2>
 
 
 <div className='flex flex-col-reverse md:flex-row p-8 gap-5' >
