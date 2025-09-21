@@ -39,7 +39,7 @@ const countries =countriesData.countries
 <h2 className='mt-10 text-center text-3xl text-cyan-500 font-bold'>In the Country : {countries.length}</h2>
 
 
-<div className='flex flex-col md:flex-row p-8 gap-5' >
+<div className='flex flex-col-reverse md:flex-row p-8 gap-5' >
 
     <div className='grid grid-cols-1 md:grid-cols-3 gap-5 md:w-3/4  mt-10'>   
     {
@@ -51,7 +51,7 @@ countries.map(country => <Country key={country.cca3} country={country} handleVis
 
 <div className=''>
 <h3 className='mt-10 text-center sm:text-sm md:text-xl text-orange-500 font-bold px-3'>Total country visited: {visitedcountries.length}</h3>
-<h4 className=' sm:text-sm md:text-xl text-blue-500 font-bold px-4 mt-2 '>visited flags : {visitedFlags.length}</h4>
+<h4 className=' sm:text-sm md:text-xl text-center text-blue-500 font-bold px-4 mt-2'>visited flags : {visitedFlags.length}</h4>
 
 <ol className='text-center mt-3 text-xl text-fuchsia-600 list-decimal list-inside '>
   {
@@ -59,7 +59,7 @@ countries.map(country => <Country key={country.cca3} country={country} handleVis
   }
 </ol>
 
-<div className='w-40 space-y-3 px-7 mt-3 '>
+<div className='w-40 space-y-3 px-7 mt-3 mx-auto'>
   {
     visitedFlags.map((flag ,index) => <img className='p-2 shadow-md' src={flag} key={index}></img>)
 

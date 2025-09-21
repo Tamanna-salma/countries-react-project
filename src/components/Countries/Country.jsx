@@ -1,12 +1,24 @@
 import React, { useState } from 'react'
 
 const Country = ({ country,handleVisitedCountry ,visitflag ,resetHandler}) => {
-  const [visit,setVisit]=useState(false);
+  const [visited,setVisited]=useState(false);
 
   // console.log(country.name.common);
   // console.log(handleVisitedCountry);
   const click = () => {
-    setVisit(!visit);
+
+    console.log("clicked");
+// basic system
+    // if(visited){
+    //   setVisited(false)
+    // }else{
+    //   setVisited(true)
+    // }
+    // or second system
+    // setVisited(visited?false: true);
+
+    // third system
+  setVisited(!visited)
     handleVisitedCountry(country) 
   }
 
@@ -24,7 +36,10 @@ const Country = ({ country,handleVisitedCountry ,visitflag ,resetHandler}) => {
           <p>population :  {country.population.population}</p>
           <p>Area :{country.area.area} {country.area.area > 300000 ? "Big country" : "Small country"} </p>
           <div className='flex gap-2'>
-            <button onClick={click} className='bg-amber-500 sm:text-sm md:tex-xl font-bold sm:rounded-sm md:rounded p-2 mt-2 hover:bg-amber-300'>Not Visited</button>
+            <button onClick={click}className='bg-amber-500 sm:text-sm md:tex-xl font-bold sm:rounded-sm md:rounded p-2 mt-2 hover:bg-amber-300'>{visited?'visited': 'Not visited'}
+             
+              
+            </button>
 
           <button onClick={()=>{visitflag(country.flags.flags.png)}}  className='bg-amber-500 tex-sm font-bold rounded p-2 mt-2 hover:bg-amber-200'> Add visited Flags</button>
 
